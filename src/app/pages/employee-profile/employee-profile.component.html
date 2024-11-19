@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header">
+      <h2>Employee Management</h2>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date of Birth</th>
+            <th>Gender</th>
+            <th>Mobile No</th>
+            <th>Username</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.dateOfBirth | date }}</td>
+            <td>{{ employee.gender }}</td>
+            <td>{{ employee.mobileNo }}</td>
+            <td>{{ employee.userName }}</td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteEmployee(employee.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-success mt-3" (click)="addEmployee()">Add Employee</button>
+    </div>
+  </div>
+</div>

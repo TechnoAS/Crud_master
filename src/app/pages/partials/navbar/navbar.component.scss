@@ -1,0 +1,10 @@
+
+.nav-link {
+    color: inherit; /* Ensure the link inherits the color */
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-link:hover {
+    color: red; /* Change color to red on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
